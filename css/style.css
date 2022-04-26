@@ -1,0 +1,784 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+     font-family: 'varela round' , sans-serif;
+}
+.header{
+    width: 100%;
+    position:fixed;
+    background-color:rgba(0, 0, 0, 0.5);
+    z-index: 10;
+}
+.container{
+    margin: auto;
+    width: 80%;
+}
+.parent {
+  width: 40%;
+  float: left;   
+}
+.img1 {
+    width: 50px;
+    height:50px;
+    margin-left: 150px;
+    float: left;
+}
+.list1{
+    float:left;
+    width: 60%;
+    text-align: right;
+}
+.list1 li{
+    display:inline-block;
+    list-style:none;
+}
+.part{
+    position: absolute;
+    width: 120px;
+    padding: 6px;
+    background-color: blue;
+    text-align: center;
+    opacity: 0;
+    display: none;
+    visibility: hidden;
+    transition: 0.5s;
+    left:75%;
+}
+.list1 li a{
+    color: red;
+    padding:12px;
+    display: block;
+    visibility: visible;
+    text-decoration: none;
+}
+.list1 li a::after, .list li a.active::after{
+    content:"";
+    width:0;
+    height:3px;
+    display: block;
+    background-color: blue;
+    margin-top: 2px;
+    transition: 0.5s;
+}
+.list1 li a.active::after ,.list1 li a:hover::after{
+    width: 100%;
+}
+.Pb{
+    position: relative;
+}
+.part .A1{
+    color: white;
+    display: block;
+    padding: 10px;
+}
+.Pb:hover+.part{
+    display:block;
+    visibility:visible;
+    opacity:1;
+}
+/* -----------------------------header------------------------------------ */
+.home{
+    background-image: url(../img/pic3.jpeg);
+    height: 100vh;
+    background-position:cover;
+    position: relative;
+}
+.overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0 ;
+    left: 0;
+    background-color:rgba(0, 0,0,0.7);
+}
+.hocontent{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%  ,  -50% );
+    text-align: center;
+    width: 70%;
+}
+.H{
+    color: white;
+    font-size: 55px;
+}
+.Par{
+    color:rgb(255, 235, 205);
+   line-height: 1.5px;
+    margin-top: 20px ;
+    margin-bottom:18px;
+    letter-spacing: 2px;
+}
+.btn{
+    font-size: 18px;
+    cursor: pointer;
+    padding: 15px 0px ;
+    border-radius: 5px;
+    border: 0;
+    width: 150px;
+}
+.btn1{
+    margin-right: 8px;    
+}
+.btn2{
+    background-color:blue;
+    color:rgb(255, 248, 220);
+}
+.btn:hover {
+    opacity:0.7;
+}
+/* --------------------------------home------------------------------------- */
+.about{
+    padding:120px 0px;
+}
+.abcontent{
+    text-align: center;
+    height: 350px;
+    overflow: hidden;
+}
+.mydiv{
+    border:1px solid rgb(160, 160, 160);
+     text-align: center;
+     width: 30%;
+    float: left;
+    padding: 30px 15px;
+    position: relative;
+    }
+.mydiv.mb{
+    margin: 0 5%;
+}
+.icon{
+    color: rgb(97, 149, 255);
+    margin-bottom: 10px;
+}
+.T{
+    margin-bottom: 15px;
+    transition:.5s;
+}
+.p2{
+    letter-spacing: 2px;
+    line-height: 22px;
+    margin-bottom: 15px;
+    color:rgb(136, 153, 153);
+}
+.anc1{
+    text-decoration: none;
+    color: rgb(97, 149, 255);
+}
+.mydiv::after{
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    top:0;
+    left:0;
+    background-color: rgb(51, 51, 51); 
+}
+.mydiv:hover .T{
+    color:white;
+}
+.mydiv:hover::after {
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transition: 1s;
+}
+.HH{
+    margin: 20px 0px 9px 0px;
+    font-size: 35px;
+    text-transform: capitalize;
+}
+.line{
+    display: block;
+    width: 62px;
+    height: 4px;
+    background-color: rgb(65, 105, 225);
+    margin: 0  auto  50px  auto;
+}
+.container{
+    margin: auto;
+    width: 80%;
+}
+.aheader{
+    text-align: center;  
+}
+/* -----------------------------about---------------------------- */
+.PORTFOLIO{
+    background-color:rgb(232, 232, 232);
+    background-attachment: fixed;
+    background-position:cover;
+ }
+ .PORTFOLIO .aheader{
+     padding: 80px;
+ }
+ .pocontent{
+     overflow: hidden;
+ }
+ .poitem{
+     width: 30%;
+     float: left;
+     margin-bottom: 20px;
+     position: relative;
+     padding:20px; 
+ }
+ .poitem img{
+     width: 100%;
+ }
+ .poitem.Ma{
+      margin: 0 5%;
+ }
+ .layer{
+     position: absolute;
+     top: 0;
+     left: 0;
+     bottom: 0;
+     right: 0;
+     width: 100%;
+     height: 100%;
+     text-align: center;
+     background-color: rgba(0, 0,0,0.7);
+     opacity: 0;
+     display: none;
+     visibility: hidden;
+     transition: 1s;
+ }
+ .poitem:hover .layer{
+     display: block;
+     visibility: visible;
+     opacity: 1;
+ }
+ .inf{
+     text-align: center;
+     width: 80%;
+     left:50%;
+     top:50%;
+     transform: translate(-50%,-50%);
+     position: absolute;
+ }
+ .cat{
+     color: rgb(97, 149, 255);
+     text-transform: uppercase;
+     margin-bottom: 5px;
+     position: relative;
+     top: 15px;
+     visibility: hidden;
+     transition:top 1s ,opacity 0.5s;
+     transition-delay: 0;
+     opacity: 0;
+     display: block;
+ }
+ .Hh{
+     font-size: 20px;
+     color:white;
+     margin-bottom: 10px;
+     position: relative;
+     top: 15px;
+     opacity: 0;
+     visibility: hidden;
+     transition:0.5s;
+     transition-delay: .4s;
+ }
+ .layer a{
+     display: inline-block;
+     width:40px;
+     height: 40px;
+     background-color: rgb(97, 149, 255);
+     position: relative;
+     top:15px;
+     opacity: 0;
+     visibility: hidden;
+     transition: 0.5s;
+     transition-delay: .6s;
+ }
+ .layer a i{
+ line-height: 40px;
+ }
+ .poitem:hover .Hh,
+ .poitem:hover .layer a,
+ .poitem:hover .cat{
+     top: 0;
+     opacity: 1;
+     visibility: visible; 
+ }
+ /* -----------------------------portfolio------------------------------------- */
+ .ofcontent{
+    overflow: hidden;
+}
+.D1{
+    width: 30%;
+    float: left;
+    margin-bottom: 20px;
+    border: 1px solid rgb(168, 168, 168);
+    position: relative;
+    padding: 30px 15px 30px 70px;
+}
+.D1.m{
+    margin: 0 5%;
+}
+.D1 .icon{
+    position: absolute;
+    left: 15px;
+    top: 25px;
+    color: rgb(97, 149, 255);
+}
+.TT{
+    margin-bottom: 15px;
+    transition: 1s;
+}
+.p3{
+    text-transform: capitalize;
+    margin-bottom: 15px;
+    line-height: 1.5;
+    color: rgb(153, 153, 153);
+}
+.D1::after{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 0;
+    left: 0;
+    background-color:rgb(51, 51, 51);
+    transition: 0.5s; 
+}
+.D1:hover .TT{
+    color: white;
+}
+.D1:hover::after {
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+/* -----------------------------offer---------------------------- */
+.choose{
+    background-color: rgb(249, 249, 249);
+    margin-top: 100px;
+}
+.cont2{
+    float: left;
+    width: 50%;
+}
+.choose .aheader .HH{
+    text-align:left;
+    
+}
+.choose .aheader .line{
+    text-align: left;
+    margin: 0px 0px 45px 0px;
+}
+.desc{
+    padding-right: 20px;
+    color: rgb(153, 153, 153);
+    line-height: 1.5;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+.chlist{
+    list-style: none;
+}
+.chlist li{
+    margin-bottom: 14px;
+    color: rgb(153, 153, 153);
+}
+.chlist li i{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid rgb(97, 149, 255);
+    color: rgb(97, 149, 255);
+    padding: 4px;
+}
+.img10{
+    width: 480px;
+    height: 400px;
+}
+.bullet{
+    list-style: none;
+    text-align: center;
+}
+.bullet li{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 10px 5px;
+    background-color: rgb(168, 168, 168);
+}
+.bullet li.active{
+    background-color: rgb(97, 149, 255);
+}
+.bullet li:hover{
+    background-color: rgb(97, 149, 255);
+}
+/* ----------------------------choose------------------------------ */
+.count{
+    position: relative;
+    height: 350px;
+    background-size: cover;
+    background-attachment: fixed;
+    background-image: url(../img/pic20.jpeg);
+    margin-top: 650px;
+    margin-bottom:-20px;
+}
+.over{
+    overflow: hidden;
+    padding-top: 130px;
+}
+.cont{
+    width: 25%;
+    float: left;
+    text-align: center;
+}
+.cont .icon{
+    color: rgb(97, 149, 255);
+    margin-bottom: 15px;
+}
+.ti{
+    font-weight: bold;
+    font-size: 30px;
+    color:white;
+}
+.text3{
+    color: white;
+}
+/* -------------------------count------------------------------ */
+.price{
+    background-color: rgb(232, 232, 232);
+    height: 600px;
+    width: 100%;
+}
+.price .aheader .HH{
+    padding-top: 60px;
+    
+}
+.content{
+    overflow: hidden;
+}
+.Divo{
+    float: left;
+    width: 30%;
+    height:350px;
+    text-align: center;
+    padding: 30px 15px;
+    border:1px solid rgb(168, 168, 168);
+    position: relative;
+}
+.Divo.M{
+    margin: 0 5%;
+}
+.text2{
+font-size: 16px;
+color: rgb(153, 153, 153);
+}
+.perM{
+    width: 105px;
+    height: 105px;
+    border-radius: 50%;
+    padding: 12px 0px;
+    border: 2px solid rgb(97, 149, 255);
+    margin: 20px auto;
+}
+.CC{
+    font-size: 50px;
+}
+.Mo{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 16px;
+}
+.list12{
+    list-style: none;
+}
+.btn8{
+    display: block;
+    width: 120px;
+    border: 2px solid rgb(97, 149, 255);
+    margin: 20px 70px;
+    padding: 4px;
+    transition:0.5s;
+}
+.list12 li{
+    color: rgb(153, 153, 153);
+    line-height: 1.5;
+}
+.Divo::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0;
+    top: 0;
+    left: 0;
+    background-color: #0b0c0c;
+    opacity: 0.5;
+    transition: 0.5s; 
+}
+.Divo:hover::after{
+    width: 100%;
+    height: 100%;
+}
+.Divo:hover .text2{
+    color: rgb(236,11,11);
+}
+.Divo:hover .perM{
+    color: rgb(245,12,12);
+    transition: 1s;
+}
+/* -----------------------price------------------------ */
+.sec{
+    position: relative;
+    background-image: url(../img/pic18.png);
+    background-attachment: fixed;
+    background-size: cover;
+    height: 350px;
+}
+.seccont{
+    overflow: hidden;
+    margin: auto;
+    width: 90%;
+}
+.secItem{
+    float: left;
+    width: 50%;
+    color: white;
+    padding: 55px 20px 0px 0px;
+    margin-bottom: 110px;
+}
+.secimg{
+    padding: 90px 20px 10px 150px;
+    position: relative;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+.secimg img{
+    position: absolute;
+    margin:-20px -20px ;
+    top: 80px;
+    left: 60px;
+    border-radius: 50%;
+}
+.secimg span{
+    color: rgb(97, 149, 255);
+}
+.Par1{
+    text-transform:capitalize;
+    line-height: 1.5;
+    margin-left: 70px;
+    font-size: 14px;
+}
+/* -------------------------------sec--------------------------- */
+.tecont{
+    overflow: hidden;
+    padding-left: 70px;
+}
+.team .aheader{
+    padding: 60px;
+}
+.teitem{
+    display: block;
+    float: left;
+    text-align: center;
+    background-color: rgb(209, 202, 202);
+    position: relative;
+    padding: 17px 13px;
+    width: 28%;
+}
+.teimg{
+    position: relative;
+    margin: auto;
+    width: 85%;
+}
+.teimg img{
+    width: 100%;
+}
+.teitem.mm{
+    margin: 0 5%;
+}
+.dili{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+}
+.teitem:hover .dili{
+    display: block;
+    visibility: visible;
+    opacity: 1;
+}
+.dili a{
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-color: rgb(123, 167, 255);
+    color: white;
+    margin-left: auto;
+}
+.dili a i{
+    line-height: 40px;
+}
+.name{
+    color: rgb(34, 34, 34);
+    padding: 10px 0px;
+}
+.text{
+    color: rgb(153, 153, 153);
+    font-size: 14px;
+}
+.teitem:hover .name{
+    color: white;
+    transition: 0.5s;
+}
+.teitem:hover .text{
+    color:blue;
+    transition: 1s;
+}
+.teitem::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0;
+    top:0;
+    left: 0;
+    background-color: rgb(51, 51, 51);
+    opacity: 0;
+}
+.teitem:hover::after{
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+    transition: 1s;
+}
+/* --------------------------team------------------------- */
+.div_ne{
+    overflow: hidden;
+    background-color:whitesmoke;    
+}
+.news .aheader{
+    padding: 80px;
+}
+.divns{
+    width: 30%;
+    float: left;
+    background-color: white;
+    position: relative;
+}
+.img77{
+ margin-left: 20px;
+ width: 100%;
+}
+.divns.imp{
+    margin: 0 5%;
+}
+.list{
+    list-style: none;
+    margin: 10px 0px;
+}
+.list li{
+    display: inline-block;
+    font-size: 12px;
+    margin: 0px 5px;
+}
+.list li i{
+    color: rgb(97, 149, 255);
+}
+.inf11{
+    padding: 20px;
+}
+.H31{
+    font-weight: bold;
+    margin: 20px 0px 25px 0px;
+}
+.PP{
+    line-height:1.5;
+    color: rgb(153, 153, 153);
+    margin-bottom: 20px;
+}
+.inf11 a{
+    line-height: 2px;
+    text-decoration: none;
+    color: rgb(97, 149, 255);
+}
+.divns::after{
+    content:"";
+    transition: 1s;
+    position: absolute;
+    background-color: rgb(97, 149, 255);
+    width: 100%;
+    height: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    opacity: 0;
+}
+.divns:hover::after{
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+}
+/* --------------------------------news---------------------------- */
+
+.footer{
+    height:300px;
+    background-color: rgb(76, 77, 82);
+    text-align: center;
+    padding: 60px 0px;
+}
+.img18{
+    width: 160px;
+    height: 70px;
+}
+.link{
+    list-style: none;
+    margin: 20px 0px;
+}
+.p12{
+    color:rgb(153, 153, 153);
+    font-size: 12px;
+}
+.li12{
+    display: inline-block;
+    background-color: rgb(97, 149, 255);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: relative;
+    z-index: 1;
+}
+.a12{
+display: block;
+width: 100%;
+height: 100%;
+color:white;
+line-height: 50px;
+font-size: 25px;
+}
+.li12:hover::after{
+    opacity:0.7;
+    width: 100%;
+    height: 100%;
+    z-index: -1; 
+    border-radius: 50%;
+}
+.li12::after{
+    content:"";
+    transition: 0.2s;
+    position: absolute;
+    background-color: rgb(9, 84, 236);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    opacity: 0;
+}
+/* -------------------------footer------------------------ */
